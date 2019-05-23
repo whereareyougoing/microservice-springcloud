@@ -24,8 +24,8 @@ public class ScheduledService {
 
     @Scheduled(cron = "0/5 * * * * *")
     @Async
-    public void scheduled(){
-        log.info("=====>>>>>使用cron  {}",System.currentTimeMillis());
+    public void scheduled() {
+        log.info("=====>>>>>使用cron  {}", System.currentTimeMillis());
     }
 
     @Scheduled(fixedRate = 5000)
@@ -35,9 +35,8 @@ public class ScheduledService {
 
     @Scheduled(fixedDelay = 5000)
     public void scheduled2() {
-        log.info("=====>>>>>fixedDelay{}",System.currentTimeMillis());
+        log.info("=====>>>>>fixedDelay{}", System.currentTimeMillis());
     }
-
 
 
 }

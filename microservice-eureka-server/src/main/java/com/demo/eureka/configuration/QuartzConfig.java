@@ -15,14 +15,14 @@ import org.springframework.scheduling.Trigger;
 public class QuartzConfig {
 
     @Bean
-    public JobDetail teatQuartzDetail(){
+    public JobDetail teatQuartzDetail() {
 
         return JobBuilder.newJob(TestQuartz.class).withIdentity("testQuartz").storeDurably().build();
 
     }
 
     @Bean
-    public Trigger testQuartzTrigger(){
+    public Trigger testQuartzTrigger() {
 
         SimpleScheduleBuilder scheduleBuilder = SimpleScheduleBuilder.simpleSchedule()
                 .withIntervalInSeconds(10)  //设置时间周期单位秒
